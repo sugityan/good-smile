@@ -226,7 +226,7 @@ export default function Home() {
       <div className="mt-10" />
       <div className="home-company">
         <div className="title">
-          <h2 className="text-3xl font-bold">会社概要</h2>
+          <h2 className="text-3xl font-bold text-center">会社概要</h2>
           <span
             style={{
               borderBottom: "2px solid orange",
@@ -235,21 +235,56 @@ export default function Home() {
             }}
           ></span>
         </div>
-        <div className="contents">
-          <div className="company-info">
-            <h2>会社概要</h2>
-            <Table className="mt-5 bordered-table">
-              <TableBody>
-                <TableRow>
-                  <TableCell>
-                    <h2 className="font-bold">社名</h2>
-                    <p className="text-gray-500 whitespace-normal">
-                      株式会社GoodSmile
-                    </p>
-                  </TableCell>
-                </TableRow>
-              </TableBody>
-            </Table>
+        <div className="flex justify-center items-center">
+          <div className="contents">
+            <div className="company-info">
+              <div className="flex justify-center items-center">
+                <Table className="table">
+                  <TableBody>
+                    <TableRow>
+                      <TableCell className="table-cell">社名</TableCell>
+                      <TableCell className="table-cell">
+                        株式会社GoodSmile
+                      </TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="table-cell">所在地</TableCell>
+                      <TableCell className="table-cell">
+                        〒132-0035 東京都江戸川区平井5-23-13 ハイツ桑岡405
+                      </TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="table-cell">電話番号</TableCell>
+                      <TableCell className="table-cell">03-6826-2229</TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="table-cell">代表者名</TableCell>
+                      <TableCell className="table-cell">横山 将</TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="table-cell">資本金</TableCell>
+                      <TableCell className="table-cell">100万円</TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="table-cell">設立年月日</TableCell>
+                      <TableCell className="table-cell">
+                        2023年11月7日
+                      </TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="table-cell">事業内容</TableCell>
+                      <TableCell className="table-cell">軽貨物運送業</TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="table-cell">保有資格</TableCell>
+                      <TableCell className="table-cell">
+                        貨物軽自動車運送
+                      </TableCell>
+                    </TableRow>
+                  </TableBody>
+                </Table>
+              </div>
+            </div>
           </div>
         </div>
       </div>

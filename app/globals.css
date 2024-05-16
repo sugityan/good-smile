@@ -115,4 +115,28 @@ html {
 .home-company {
   text-align: center;
   width: 100%;
+  background-color: #fffbf4;
+  padding-top: 50px;
+}
+
+/* styles/globals.css */
+
+.home-company .table {
+  text-align: left;
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  text-indent: initial;
+  border-spacing: 2px;
+}
+
+.table-cell {
+  border-bottom: 1px solid gray;
+  padding: 8px;
+}
+
+.company-info {
+  width: 80vw;
 }

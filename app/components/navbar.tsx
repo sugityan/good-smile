@@ -51,7 +51,13 @@ export function Navbar() {
                   <img className="w-20" src="/nav-logo-first.png" alt="Image" />
                 </Link>
                 <Link href="/">
-                  <p className="ml-2 text-white">株式会社GoodSmile</p>
+                  <p
+                    className={`ml-2 ${
+                      isScrolled ? "text-black" : "text-white"
+                    }`}
+                  >
+                    株式会社GoodSmile
+                  </p>
                 </Link>
               </div>
               <div className="hidden sm:flex sm:space-x-8">
@@ -61,8 +67,12 @@ export function Navbar() {
                     href={item.href}
                     className={classNames(
                       pathname === item.href
-                        ? "border-slate-500 text-gray-900"
-                        : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300",
+                        ? `border-slate-500 ${
+                            isScrolled ? "text-black" : "text-white"
+                          }`
+                        : `{border-transparent ${
+                            isScrolled ? "text-black" : "text-white"
+                          } hover:text-gray-700 hover:border-gray-300}`,
                       "inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
                     )}
                     aria-current={pathname === item.href ? "page" : undefined}
