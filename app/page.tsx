@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { Table, TableBody, TableCell, TableRow } from "@tremor/react";
+import Footer from "./components/footer";
 
 export default function Home() {
   const [windowWidth, setWindowWidth] = useState(0);
@@ -288,6 +289,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Footer />
     </main>
   );
 }

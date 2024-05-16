@@ -117,6 +117,7 @@ html {
   width: 100%;
   background-color: #fffbf4;
   padding-top: 50px;
+  padding-bottom: 10vh;
 }
 
 /* styles/globals.css */
@@ -139,4 +140,31 @@ html {
 
 .company-info {
   width: 80vw;
+}
+
+/* styles/globals.css */
+
+footer {
+  background-color: #f99607; /* オレンジ色 */
+  color: white;
+  padding: 20px 0;
+  width: 100%;
+}
+
+footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer img {
+  margin-bottom: 16px;
+}
+
+footer h2 {
+  margin-bottom: 8px;
+}
+
+footer p {
+  margin: 4px 0;
 }
