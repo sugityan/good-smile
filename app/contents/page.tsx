@@ -62,7 +62,7 @@ const ContentsPage: React.FC = () => {
           )}
           <div className="contents">
             <div className="flex flex-col">
-              <h3>お弁当配信</h3>
+              <h3>お弁当配送</h3>
               <br />
               <p>
                 個人の働き方に合わせた半日案件など！
