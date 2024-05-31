@@ -5,14 +5,12 @@ import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
-
-
 export function Navbar() {
   const navigation = [
     { name: "TOP", href: "/" },
     { name: "事業内容", href: "/contents" },
     { name: "新着情報", href: "/reservation" },
-    { name: "お問い合わせ", href: "/reservation" },    
+    { name: "お問い合わせ", href: "/reservation" },
   ];
 
   function classNames(...classes: string[]) {
@@ -39,18 +37,17 @@ export function Navbar() {
     };
   }, []);
   const pathname = usePathname();
-  
-  
-
 
   return (
     <div
-      className={`w-full ${pathname === '/' ? 'fixed' : ''}  ${isScrolled ? "bg-white" : "bg-transparent"}`}
+      className={`w-full fixed ${pathname === "/" ? "" : "bg-white"}  ${
+        isScrolled ? "bg-white " : "bg-transparent"
+      }`}
     >
       <Disclosure as="nav">
         {({ open }) => (
           <>
-            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex justify-between items-center h-25">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex justify-between items-center">
               <div className="flex items-center" id="logo">
                 <Link href="/">
                   <img
@@ -61,7 +58,11 @@ export function Navbar() {
                 </Link>
                 <Link href="/">
                   <p
-                    className={`ml-2 ${pathname === '/' ? `${isScrolled ? "text-black" : "text-white"}` : "text-black"}                       
+                    className={`ml-2 ${
+                      pathname === "/"
+                        ? `${isScrolled ? "text-black" : "text-white"}`
+                        : "text-black"
+                    }                       
                     `}
                   >
                     株式会社GoodSmile
@@ -76,10 +77,14 @@ export function Navbar() {
                     className={classNames(
                       pathname === item.href
                         ? `border-slate-500 ${
-                          pathname === "/" ? `${isScrolled ? "text-black" : "text-white"}` : "text-black"                            
+                            pathname === "/"
+                              ? `${isScrolled ? "text-black" : "text-white"}`
+                              : "text-black"
                           }`
                         : `{border-transparent ${
-                          pathname === "/" ? `${isScrolled ? "text-black" : "text-white"}` : "text-black"                             
+                            pathname === "/"
+                              ? `${isScrolled ? "text-black" : "text-white"}`
+                              : "text-black"
                           } hover:text-gray-700 hover:border-gray-300}`,
                       "inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
                     )}
@@ -88,8 +93,6 @@ export function Navbar() {
                     {item.name}
                   </Link>
                 ))}
-                          
-
               </div>
               <div className="-mr-2 flex items-center sm:hidden">
                 <Disclosure.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2">

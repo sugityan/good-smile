@@ -3,9 +3,9 @@
 @tailwind utilities;
 :root {
   --fontFamily: "Noto Sans JP", YuGothic, "Yu Gothic", "Avenir",
-  "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans",
-  "ヒラギノ角ゴシック", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic",
-  sans-serif;
+    "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans",
+    "ヒラギノ角ゴシック", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic",
+    sans-serif;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -20,7 +20,7 @@
   .text-balance {
     text-wrap: balance;
   }
-} */ 
+} */
 
 * {
   font-family: var(--fontFamily);
@@ -28,10 +28,6 @@
 
 /* 画面幅が600px以下の場合のスタイル */
 @media (max-width: 600px) {
-  p {
-    font-size: 12.8px; /* 画面幅が600px以下の場合の文字サイズ */
-  }
-
   .homepage-top p {
     font-size: 36px;
   }
@@ -43,9 +39,6 @@
 
 /* 画面幅が600pxより大きい場合のスタイル */
 @media (min-width: 601px) {
-  p {
-    font-size: 18px; /* 基本的な文字サイズを18pxに設定 */
-  }
   .homepage-top p {
     font-size: 45px;
   }
@@ -62,11 +55,15 @@
   width: 100vw;
 }
 
- 
 .home-advantage {
   text-align: center;
   background-color: #fffbf4;
   width: 100%;
+}
+
+.home-advantage-contents {
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 .home-advantage .contents h3 {
@@ -147,17 +144,37 @@ footer p {
   width: 9vw;
 }
 
-
 .contents-top {
   background-image: url("/contents-top.png");
   background-size: cover;
   background-position: center;
-  height: 30vh;
-  width: 100vw; 
-} h2 {
+  height: 20vh;
+  width: 100vw;
+}
+
+h2 {
   font-size: clamp(25.6px, 5vw, 36px);
-  text-align: center;
-} p {
+}
+
+p {
   font-size: clamp(16px, 4vw, 22.5px);
-  text-align: center;
+}
+
+.contents {
+  text-align: left;
+  max-width: 480px;
+}
+
+.contents h3 {
+  font-size: 22.5px;
+  font-weight: 700;
+}
+
+.contents p {
+  font-size: clamp(12.5px, 3vw, 18px);
+}
+
+.top-contents {
+  max-width: 960px;
+  margin: 0 auto;
 }
