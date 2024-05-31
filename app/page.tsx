@@ -22,7 +22,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between ">
+    <main>
       <div className="homepage-top flex flex-col justify-center items-center">
         <img className="w-1/5 " src="/nav-logo-first.png" alt="Image" />
         <div className="pt-10" />
@@ -58,7 +58,7 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <div className="mt-10" />
+      <div className="mt-10" />      
       <div className="home-advantage">
         <div className="mt-10" />
         <div>
@@ -216,7 +216,21 @@ export default function Home() {
             }}
           ></span>
         </div>
-        <div className="news-links"></div>
+        <div className="news-links">
+          <div className="flex justify-center items-center">
+            <Table className="table">
+              <TableBody>
+                <TableRow>
+                  <TableCell className="table-cell">2024.05.20</TableCell>
+                  <TableCell className="table-cell">
+                    ホームページを公開しました。
+                  </TableCell>
+                </TableRow>
+
+              </TableBody>
+            </Table>
+          </div>
+        </div>
         <div className="mt-10" />
         <div className="news-button">
           <button className="btn" style={{ backgroundColor: "#F99607" }}>
@@ -288,8 +302,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
-      <Footer />
+      </div>      
     </main>
   );
 }
