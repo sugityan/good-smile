@@ -34,7 +34,7 @@ const ContentsPage: React.FC = () => {
           <p>Business</p>
         </div>
       </div>
-      <div className="top-contents">
+      <div className="contents-top-contents">
         <div className="mt-10" />
         <div className="text-center text-2xl sm:text-1xl xl:text-xl ">
           <h2 className="font-bold">お仕事事例</h2>
@@ -215,6 +215,97 @@ const ContentsPage: React.FC = () => {
             </div>
           </div>
           {windowWidth < 1025 ? <img src="/content-top-bottom.jpg" /> : <div />}
+        </div>
+      </div>
+      <div className="mt-10"></div>
+      <div className="contents-middle-contents">
+        <div className="text-center ">
+          <div className="pt-10"></div>
+          <h2 className="text-3xl font-bold">ご依頼方法</h2>
+          <span
+            style={{
+              borderBottom: "2px solid orange",
+              display: "inline-block",
+              width: "2em",
+            }}
+          ></span>
+          <div
+            className="pt-10 px-10"
+            style={{
+              maxWidth: "960px",
+              margin: "auto",
+            }}
+          >
+            <p>
+              お電話、メールにて承っております。お気軽にお問い合わせください。
+            </p>
+            <div
+              style={{
+                border: "1px solid #DFDFDF",
+                padding: "13.5px 20px",
+                marginTop: "20px",
+                borderRadius: "5px",
+                backgroundColor: "white",
+              }}
+            >
+              <table style={{ width: "100%", borderCollapse: "collapse" }}>
+                <tbody>
+                  <tr>
+                    <td
+                      style={{
+                        verticalAlign: "top",
+                        textAlign: "left",
+                        padding: "10px",
+                      }}
+                    >
+                      <p>企業様</p>
+                    </td>
+                    <td
+                      style={{
+                        textAlign: "left",
+                        padding: "10px",
+                      }}
+                    >
+                      <p>ご依頼したい配送内容などをご相談下さい。</p>
+                      <p>
+                        御社に合った配送プランをまずは無料でお見積りいたします。
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      style={{
+                        verticalAlign: "top",
+                        textAlign: "left",
+                        padding: "10px",
+                      }}
+                    >
+                      <p>ドライバー希望者様</p>
+                    </td>
+                    <td
+                      style={{
+                        textAlign: "left",
+                        padding: "10px",
+                      }}
+                    >
+                      <p>まずは気軽にお問い合わせください。</p>
+                      <p>
+                        あなたの希望の働き方など、弊社はドライバー1人ひとりに寄り添い、最適な配達現場をご提案させていただきます！
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div className="mt-10">
+              <p>
+                営業時間: <span className="highlight">9:00〜17:00</span>
+              </p>
+              <p>営業日: 平日（土日・祝日休み）</p>
+              <p>電話番号: 03-6826-2229</p>
+              <button className="contact-button">メールフォームはこちら</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -9,7 +9,7 @@ export function Navbar() {
   const navigation = [
     { name: "TOP", href: "/" },
     { name: "事業内容", href: "/contents" },
-    { name: "新着情報", href: "/reservation" },
+    { name: "新着情報", href: "/news" },
     { name: "お問い合わせ", href: "/reservation" },
   ];
 
