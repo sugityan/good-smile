@@ -1,0 +1,133 @@
+.contact-top {
+  background-image: url("/contents-top.png");
+  background-size: cover;
+  background-position: center;
+  height: 20vh;
+  width: 100vw;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-mainContent {
+  flex: 1;
+  padding: 20px;
+}
+
+.contact-banner {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-banner h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.contact-banner img {
+  width: 100%;
+  height: auto;
+}
+
+.contact-contactInfo {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact-contactInfo h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.contact-contactInfo p {
+  margin: 5px 0;
+}
+
+.contact-formSection {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact-formSection h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contact-button {
+  background-color: #ffa000;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.contact-button:hover {
+  background-color: #ff8f00;
+}
+
+.contact-form {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-form h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contact-formGroup {
+  margin-bottom: 20px;
+}
+
+.contact-formGroup label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contact-formGroup input,
+.contact-formGroup select,
+.contact-formGroup textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-formGroup textarea {
+  resize: vertical;
+}
+
+.contact-required {
+  color: red;
+}
+
+.contact-privacyPolicy {
+  margin-left: 5px;
+}
+
+.contact-submitButton {
+  background-color: #ffa000;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  display: block;
+  margin: 0 auto;
+}
+
+.contact-submitButton:hover {
+  background-color: #ff8f00;
+}

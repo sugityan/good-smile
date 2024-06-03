@@ -10,7 +10,7 @@ export function Navbar() {
     { name: "TOP", href: "/" },
     { name: "事業内容", href: "/contents" },
     { name: "新着情報", href: "/news" },
-    { name: "お問い合わせ", href: "/reservation" },
+    { name: "お問い合わせ", href: "/contact" },
   ];
 
   function classNames(...classes: string[]) {
