@@ -1,5 +1,6 @@
 "use client";
-import React, { useState, ChangeEvent, FormEvent } from "react";
+import React, { useState, FormEvent, Suspense } from "react";
+
 import "../styles/contact.css";
 import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
@@ -77,7 +78,11 @@ const Confirm = () => {
         <p>以下の内容でよろしければ「送信する」ボタンを押して下さい。</p>
 
         <form onSubmit={handleSubmit}>
-          <div className={"contact-formGroup"}>
+          <Suspense fallback={<div>Loading...</div>}>
+            <FormDataDisplay formData={formData} />
+          </Suspense>
+
+          {/* <div className={"contact-formGroup"}>
             <label htmlFor="name">
               お名前 <p>お名前: {formData.name}</p>
             </label>
@@ -102,7 +107,7 @@ const Confirm = () => {
             <label htmlFor="inquiry">
               お問い合わせ内容 <p>{formData.inquiry}</p>
             </label>
-          </div>
+          </div> */}
           <button
             onClick={handleBack}
             className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded"
@@ -118,5 +123,41 @@ const Confirm = () => {
     </div>
   );
 };
+
+// FormDataDisplay コンポーネントを定義
+function FormDataDisplay({ formData }: { formData: any }) {
+  const searchParams = useSearchParams(); // Suspense 内で useSearchParams を使用
+
+  return (
+    <div>
+      <div className={"contact-formGroup"}>
+        <label htmlFor="name">
+          お名前 <p>お名前: {formData.name}</p>
+        </label>
+      </div>
+      <div className={"contact-formGroup"}>
+        <label htmlFor="email">
+          メールアドレス <p>{formData.email}</p>
+        </label>
+      </div>
+      <div className={"contact-formGroup"}>
+        <label htmlFor="phone">
+          電話番号 <p>{formData.phone}</p>
+        </label>
+      </div>
+      <div className={"contact-formGroup"}>
+        <label htmlFor="inquiryType">
+          お問い合わせ種類
+          {formData.inquiryType}
+        </label>
+      </div>
+      <div className={"contact-formGroup"}>
+        <label htmlFor="inquiry">
+          お問い合わせ内容 <p>{formData.inquiry}</p>
+        </label>
+      </div>
+    </div>
+  );
+}
 
 export default Confirm;
