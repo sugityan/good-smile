@@ -10,6 +10,7 @@ const Confirm = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
   // クエリパラメータからフォームデータを取得
+
   const formData = {
     name: searchParams.get("name") || "",
     email: searchParams.get("email") || "",
@@ -129,34 +130,36 @@ function FormDataDisplay({ formData }: { formData: any }) {
   const searchParams = useSearchParams(); // Suspense 内で useSearchParams を使用
 
   return (
-    <div>
-      <div className={"contact-formGroup"}>
-        <label htmlFor="name">
-          お名前 <p>お名前: {formData.name}</p>
-        </label>
+    <Suspense>
+      <div>
+        <div className={"contact-formGroup"}>
+          <label htmlFor="name">
+            お名前 <p>お名前: {formData.name}</p>
+          </label>
+        </div>
+        <div className={"contact-formGroup"}>
+          <label htmlFor="email">
+            メールアドレス <p>{formData.email}</p>
+          </label>
+        </div>
+        <div className={"contact-formGroup"}>
+          <label htmlFor="phone">
+            電話番号 <p>{formData.phone}</p>
+          </label>
+        </div>
+        <div className={"contact-formGroup"}>
+          <label htmlFor="inquiryType">
+            お問い合わせ種類
+            {formData.inquiryType}
+          </label>
+        </div>
+        <div className={"contact-formGroup"}>
+          <label htmlFor="inquiry">
+            お問い合わせ内容 <p>{formData.inquiry}</p>
+          </label>
+        </div>
       </div>
-      <div className={"contact-formGroup"}>
-        <label htmlFor="email">
-          メールアドレス <p>{formData.email}</p>
-        </label>
-      </div>
-      <div className={"contact-formGroup"}>
-        <label htmlFor="phone">
-          電話番号 <p>{formData.phone}</p>
-        </label>
-      </div>
-      <div className={"contact-formGroup"}>
-        <label htmlFor="inquiryType">
-          お問い合わせ種類
-          {formData.inquiryType}
-        </label>
-      </div>
-      <div className={"contact-formGroup"}>
-        <label htmlFor="inquiry">
-          お問い合わせ内容 <p>{formData.inquiry}</p>
-        </label>
-      </div>
-    </div>
+    </Suspense>
   );
 }
 
