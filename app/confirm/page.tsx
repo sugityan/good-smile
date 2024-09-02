@@ -9,14 +9,11 @@ const Confirm = () => {
   const pathname = usePathname();
   const router = useRouter();
   // クエリパラメータからフォームデータを取得
-
-  const formData = {
-    name: useSearchParams().get("name") || "",
-    email: useSearchParams().get("email") || "",
-    phone: useSearchParams().get("phone") || "",
-    inquiryType: useSearchParams().get("inquiryType") || "",
-    inquiry: useSearchParams().get("inquiry") || "",
-  };
+  const name = useSearchParams().get("name");
+  const email = useSearchParams().get("email");
+  const phone = useSearchParams().get("phone");
+  const inquiryType = useSearchParams().get("inquiryType");
+  const inquiry = useSearchParams().get("inquiry");
 
   const handleBack = () => {
     router.back();
@@ -82,28 +79,28 @@ const Confirm = () => {
             <div>
               <div className={"contact-formGroup"}>
                 <label htmlFor="name">
-                  お名前 <p>お名前: {formData.name}</p>
+                  お名前 <p>お名前: {name}</p>
                 </label>
               </div>
               <div className={"contact-formGroup"}>
                 <label htmlFor="email">
-                  メールアドレス <p>{formData.email}</p>
+                  メールアドレス <p>{email}</p>
                 </label>
               </div>
               <div className={"contact-formGroup"}>
                 <label htmlFor="phone">
-                  電話番号 <p>{formData.phone}</p>
+                  電話番号 <p>{phone}</p>
                 </label>
               </div>
               <div className={"contact-formGroup"}>
                 <label htmlFor="inquiryType">
                   お問い合わせ種類
-                  {formData.inquiryType}
+                  {inquiryType}
                 </label>
               </div>
               <div className={"contact-formGroup"}>
                 <label htmlFor="inquiry">
-                  お問い合わせ内容 <p>{formData.inquiry}</p>
+                  お問い合わせ内容 <p>{inquiry}</p>
                 </label>
               </div>
             </div>

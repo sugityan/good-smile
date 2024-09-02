@@ -28,7 +28,6 @@ const Contact = () => {
     e.preventDefault();
     // URLSearchParams を使用してクエリパラメータを作成
     const searchParams = new URLSearchParams(formData as any);
-
     router.push(`/confirm?${searchParams.toString()}`);
 
     // try {
