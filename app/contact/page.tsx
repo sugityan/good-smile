@@ -25,10 +25,10 @@ const Contact = () => {
   };
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+    // e.preventDefault();
     // URLSearchParams を使用してクエリパラメータを作成
     const searchParams = new URLSearchParams(formData as any);
-    <Suspense>router.push(`/confirm?${searchParams.toString()}`);</Suspense>;
+    router.push(`/confirm?${searchParams.toString()}`);
 
     // try {
     //   const response = await fetch("/api/contact", {
