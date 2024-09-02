@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, ChangeEvent, FormEvent } from "react";
+import React, { useState, ChangeEvent, FormEvent, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 
 import "../styles/contact.css";
@@ -28,7 +28,7 @@ const Contact = () => {
     e.preventDefault();
     // URLSearchParams を使用してクエリパラメータを作成
     const searchParams = new URLSearchParams(formData as any);
-    router.push(`/confirm?${searchParams.toString()}`);
+    <Suspense>router.push(`/confirm?${searchParams.toString()}`);</Suspense>;
 
     // try {
     //   const response = await fetch("/api/contact", {
