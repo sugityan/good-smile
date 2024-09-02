@@ -80,35 +80,35 @@ const Confirm = () => {
 
         <form onSubmit={handleSubmit}>
           <Suspense fallback={<div>Loading...</div>}>
-            <FormDataDisplay formData={formData} />
+            <div>
+              <div className={"contact-formGroup"}>
+                <label htmlFor="name">
+                  お名前 <p>お名前: {formData.name}</p>
+                </label>
+              </div>
+              <div className={"contact-formGroup"}>
+                <label htmlFor="email">
+                  メールアドレス <p>{formData.email}</p>
+                </label>
+              </div>
+              <div className={"contact-formGroup"}>
+                <label htmlFor="phone">
+                  電話番号 <p>{formData.phone}</p>
+                </label>
+              </div>
+              <div className={"contact-formGroup"}>
+                <label htmlFor="inquiryType">
+                  お問い合わせ種類
+                  {formData.inquiryType}
+                </label>
+              </div>
+              <div className={"contact-formGroup"}>
+                <label htmlFor="inquiry">
+                  お問い合わせ内容 <p>{formData.inquiry}</p>
+                </label>
+              </div>
+            </div>
           </Suspense>
-
-          {/* <div className={"contact-formGroup"}>
-            <label htmlFor="name">
-              お名前 <p>お名前: {formData.name}</p>
-            </label>
-          </div>
-          <div className={"contact-formGroup"}>
-            <label htmlFor="email">
-              メールアドレス <p>{formData.email}</p>
-            </label>
-          </div>
-          <div className={"contact-formGroup"}>
-            <label htmlFor="phone">
-              電話番号 <p>{formData.phone}</p>
-            </label>
-          </div>
-          <div className={"contact-formGroup"}>
-            <label htmlFor="inquiryType">
-              お問い合わせ種類
-              {formData.inquiryType}
-            </label>
-          </div>
-          <div className={"contact-formGroup"}>
-            <label htmlFor="inquiry">
-              お問い合わせ内容 <p>{formData.inquiry}</p>
-            </label>
-          </div> */}
           <button
             onClick={handleBack}
             className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded"
@@ -124,43 +124,5 @@ const Confirm = () => {
     </div>
   );
 };
-
-// FormDataDisplay コンポーネントを定義
-function FormDataDisplay({ formData }: { formData: any }) {
-  const searchParams = useSearchParams(); // Suspense 内で useSearchParams を使用
-
-  return (
-    <Suspense>
-      <div>
-        <div className={"contact-formGroup"}>
-          <label htmlFor="name">
-            お名前 <p>お名前: {formData.name}</p>
-          </label>
-        </div>
-        <div className={"contact-formGroup"}>
-          <label htmlFor="email">
-            メールアドレス <p>{formData.email}</p>
-          </label>
-        </div>
-        <div className={"contact-formGroup"}>
-          <label htmlFor="phone">
-            電話番号 <p>{formData.phone}</p>
-          </label>
-        </div>
-        <div className={"contact-formGroup"}>
-          <label htmlFor="inquiryType">
-            お問い合わせ種類
-            {formData.inquiryType}
-          </label>
-        </div>
-        <div className={"contact-formGroup"}>
-          <label htmlFor="inquiry">
-            お問い合わせ内容 <p>{formData.inquiry}</p>
-          </label>
-        </div>
-      </div>
-    </Suspense>
-  );
-}
 
 export default Confirm;
