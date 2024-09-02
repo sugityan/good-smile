@@ -8,15 +8,14 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation";
 const Confirm = () => {
   const pathname = usePathname();
   const router = useRouter();
-  const searchParams = useSearchParams();
   // クエリパラメータからフォームデータを取得
 
   const formData = {
-    name: searchParams.get("name") || "",
-    email: searchParams.get("email") || "",
-    phone: searchParams.get("phone") || "",
-    inquiryType: searchParams.get("inquiryType") || "",
-    inquiry: searchParams.get("inquiry") || "",
+    name: useSearchParams().get("name") || "",
+    email: useSearchParams().get("email") || "",
+    phone: useSearchParams().get("phone") || "",
+    inquiryType: useSearchParams().get("inquiryType") || "",
+    inquiry: useSearchParams().get("inquiry") || "",
   };
 
   const handleBack = () => {
